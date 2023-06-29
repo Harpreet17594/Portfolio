@@ -1,4 +1,39 @@
 
+
+.container-grid{
+    display: grid;
+    /* grid-template-columns:200px 200px 200px ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: " led led led"
+                        "cal puzzle buddy"; */
+    /* grid-template-columns:500px 500px ;
+    grid-template-rows: 550px 1fr; */
+    grid-template-columns:500px 500px ;
+    grid-template-rows: 500px 1fr;
+}
+.led{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    background-color: blue;
+}
+.cal{
+    grid-row-start:3;
+    grid-row-end: 2;
+
+
+    background-color: blueviolet;
+}
+.puzzle{
+    background-color: brown;
+}
+.buddy{
+    background-color: blue;
+}
+.hug{
+    background-color: rgb(33, 205, 33);
+}
+
+
 /* TOP header section code starts here */
 .parent-section{
     display: flex;
@@ -12,6 +47,64 @@
     width: 100%;
     /* background-color: aqua; */
 }
+.parent-section2{
+    display: flex;
+    height: 550px;
+    width: 100%;
+    /* background-color: aqua; */
+}
+.child-section6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 800px;
+    border-right: 6px solid black;
+}
+.child-section6 h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+.child-section7{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:90%;
+    height: 800px;
+
+}
+.child-section8{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:90%;
+    height: 200px;
+    /* background-color: aqua; */
+
+}
+.child-section8 ul{
+    text-decoration: none;
+}
+.child-section8 li{
+    display: inline;
+    padding: 10px;
+    align-items: center;justify-content: center;
+    border-bottom: 5px solid black;
+    margin-left: 80px;
+}
+.child-section8 a{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .child-section1{
     justify-content: center;    
@@ -26,6 +119,9 @@
     width: 70%;
 
 }
+.child-section2 a{
+    text-decoration: none;
+}
 .child-section3{
     display: flex;
     align-items: end;
@@ -38,19 +134,30 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 20%;
+    width: 30%;
     height: 250px;
 }
 .child-section5{
     display: flex;
-    align-items: self-start;
-    justify-content: left;
-    width: 80%;
+    align-items: center;
+    justify-content: end;
+    width: 90%;
     height: 250px;
 }
+/* ------------------------------------ */
+
+.parent-section2{
+    display: flex;
+    height: 800px;
+    width: 100%;
+    /* background-color: rgb(93, 96, 96); */
+}
+
+
+/* ------------------------------ */
 .child-section4 h1{
     padding: 80px;
-    border-right: 5px solid red;
+    border-right: 5px solid black;
     font-family: 'Courier New', Courier, monospace;
 }
 .child-section5 h1{

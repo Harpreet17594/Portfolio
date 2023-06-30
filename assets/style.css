@@ -35,7 +35,11 @@
 .con-div2 ul{
     text-decoration: none;
 }
+.con-div1 a{
+    text-decoration: none;
+}
 .con-div2 li{
+    text-decoration: solid;
     display: inline;
     padding: 10px;
     font-size: 30px;
@@ -63,6 +67,9 @@
 .sec-div1{
     grid-area: sec-div1;
     
+}
+.sec-div1 img{
+    border: 5px solid;
 }
 .sec-div2{
     grid-area: sec-div2;
@@ -162,12 +169,16 @@
     margin-left: 15px;
     
 }
-.nested-div1:hover{
+.nested-div1{
     grid-area: nested-div1;
     background-image: url("../images/02-portfolio-4.jpg");
     background-size: cover;
     border: 4px solid skyblue;
+    opacity: 0.8;
     
+}
+.nested-div1:hover{
+    opacity: 1.0;
 }
 
 .nested-div1 h3{
@@ -184,6 +195,10 @@
     background-image: url("../images/02-portfolio-1.jpg");
     background-size: cover;
     border: 4px solid skyblue;
+    opacity: 0.8;
+}
+.nested-div2:hover{
+    opacity: 1.0;
 }
 .nested-div2 h3{
     padding: 20px;
@@ -200,6 +215,10 @@
     background-image: url("../images/02-portfolio-2.jpg");
     background-size: cover;
     border: 4px solid skyblue;
+    opacity: 0.8;
+}
+.nested-div3:hover{
+    opacity: 1.0;
 }
 .nested-div3 h3{
     padding: 20px;
@@ -215,7 +234,10 @@
     background-image: url("../images/02-portfolio-3.jpg");
     background-size: cover;
     border: 4px solid skyblue;
-
+    opacity: 0.8;
+}
+.nested-div4:hover{
+    opacity: 1.0;
 }
 .nested-div4 h3{
     padding: 20px;
@@ -231,7 +253,11 @@
     background-image: url("../images/02-run-buddy.jpg");
     background-size: cover;
     border: 4px solid skyblue;
+    opacity: 0.8;
 
+}
+.nested-div5:hover{
+    opacity: 1.0;
 }
 .nested-div5 h3{
     padding: 20px;

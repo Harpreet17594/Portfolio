@@ -5,11 +5,11 @@
 
 /*------------------------------------------------------------  */
                         /* working on grid header */
-.container-grid{
+.container-grid{        
     display: grid;
     min-height: 150px;
     height:10vh;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 50%;         
     grid-template-rows: 50% 50%;
     grid-template-areas:"con-div1 con-div2";
     align-items: end;
@@ -42,11 +42,14 @@
     text-decoration: solid;
     display: inline;
     padding: 10px;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-bottom: 5px solid black;
 }
-
+.con-div2 a{
+    text-decoration: none;
+    color: black;
+}
 /* --------------------------------------------------------------------------- */
                     /* Working on section after header */
 
@@ -62,6 +65,7 @@
     background-image: url("../images/02-hero-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;    
+    
 }
 /* assigning grid areas */
 .sec-div1{
@@ -119,7 +123,7 @@
 }
 .art-div2 p{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1vw;
+    /* font-size: 1vw; */
     margin-left: 10px;
 }
 
@@ -271,8 +275,8 @@
                     /* FOOTER GRID CODE STARTS HERE */
 .footer-grid{
     display: grid;
-    min-height: 250px;
-    height:15vh;
+    min-height: 150px;
+    /* height:15vh; */
     grid-template-columns: 30% 70%; /* two column*/
     grid-template-rows:100%;  /* one row*/
     grid-template-areas:"footer-div1 footer-div2";
@@ -309,6 +313,7 @@
 .footer-item1{
     grid-area:footer-item1 ;
     border-bottom: 5px solid black;
+    
 
 }
 .footer-item2{
@@ -339,6 +344,102 @@
     font-size: 15px;
     
 }
+
+
+
+/* MEDIA QUERIES  */
+
+@media screen and (max-width:768px) {
+                                            /* queries for header */
+        .container-grid{
+            grid-template-columns: 100%;
+            grid-template-rows: 30% 50%;
+            grid-template-areas:"con-div1" 
+                                "con-div2" ;
+                                min-height: 400px;
+            
+                                
+        }
+        .con-div1 h1{
+            margin-left: 150px;
+        }
+        .con-div2 li{
+            
+            display: block;
+        }
+                                            /* section after header */
+        .section-grid{
+            grid-template-columns: 100%;
+            grid-template-rows: 30% 70%;
+            grid-template-areas:"sec-div1" 
+                                "sec-div2" ;
+                                min-height: 600px;
+         
+                                
+        }
+                                                /* about me section */
+        .art-grid{
+            grid-template-columns: 100%;
+            grid-template-rows: 30% 70%;
+            grid-template-areas:"art-div1" 
+                                "art-div2" ;
+                                min-height: 400px;
+         
+                                
+        }
+        .art-div1 h2{
+            margin-right: 100px;
+            border-right:0px ;
+            border-bottom: 5px solid;
+        }
+                    /* work section media queries */
+        .main-grid{
+            grid-template-columns: 100%;
+            grid-template-rows: 20% 80%;
+            grid-template-areas:"main-div1" 
+                                "main-div2" ;
+                                min-height: 720px;
+         
+                                
+        }
+        .main-div2{
+            grid-template-columns: 100%;
+            grid-template-rows: 20%  20% 20% 20% 20% ;
+            grid-template-areas:"nested-div1" 
+                                "nested-div2"
+                                "nested-div3"
+                                "nested-div4"
+                                "nested-div5" ;
+                                min-height: 100%;
+        }
+        .main-div1 h3{
+            border-bottom: 5px solid;  
+        }
+        .footer-grid{
+            grid-template-columns: 100%;
+            grid-template-rows: 40% 60%;
+            grid-template-areas:"footer-div1" 
+                                "footer-div2" ;
+                                min-height: 400px;
+        }
+        .footer-div2{
+            
+            grid-template-columns: 100%;
+            grid-template-rows: 20%  20% 20% 20% 20% ;
+            grid-template-areas:"footer-item1" 
+                                "footer-item2"
+                                "footer-item3"
+                                "footer-item4"
+                                "footer-item5" ;
+                                min-height: 100%;
+        }
+        .footer-div1 h1{
+            
+            border-bottom: 5px solid black;
+        }
+
+}
+
 
 
 

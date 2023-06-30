@@ -1,229 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 
-
+/*------------------------------------------------------------  */
+                        /* working on grid header */
 .container-grid{
     display: grid;
-    /* grid-template-columns:200px 200px 200px ;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: " led led led"
-                        "cal puzzle buddy"; */
-    /* grid-template-columns:500px 500px ;
-    grid-template-rows: 550px 1fr; */
-
-                /* 2 column size */
-    grid-template-columns:500px 500px ; 
-                /* 3 row size */
-    grid-template-rows: 400px 200px 200px;
-    grid-gap: 10px;
-}
-.led{
-    grid-row: 1/2;
-    grid-column: 1/3;
-    background-image: url("../images/horison.png");
-    /* background-color: blue; */
-}
-.cal{
-    grid-row-start:3;
-    grid-row-end: 2;
-    background-image: url(../images/horison.png);
-}
-.cal h1{
-    background-color: rgb(255,255,255,0.2);
-}
-.led h1{
-    background-color: rgb(255,255,255,0.2);
+    min-height: 150px;
+    height:10vh;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:"con-div1 con-div2";
+    align-items: end;
+    justify-content: right;
 
 }
- .puzzle{
-    background-image: url("../images/horison.png") ;
+.con-div1{
+    grid-area: con-div1;
 }
-.puzzle h1{
-    background-color: rgb(255,255,255,0.2);
-
-}
-.buddy{
-    background-image: url(../images/horison.png);
-}
-.buddy h1{
-    background-color: rgb(255,255,255,0.2);
-
+.con-div2{
+    grid-area: con-div2;    
 }
 
-.hug{
-    background-image: url("../images/horison.png");
-} 
-.hug h1{
-    background-color: rgb(255,255,255,0.2);
+/* working with header title */
+.con-div1 h1{
+    padding: 10px;
+    width: fit-content;
+    margin-left: 20px;
+    background-color: rgba(69, 189, 222, 0.8);
+}
+
+/* working with navigation bar */
+.con-div2 ul{
+    text-decoration: none;
+}
+.con-div2 li{
+    display: inline;
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-bottom: 5px solid black;
+}
+
+/* --------------------------------------------------------------------------- */
+                    /* Working on section after header */
+
+.section-grid{
+    display: grid;
+    min-height: 250px;
+    height:10vh;
+    grid-template-columns: 70% 30%; /* two column*/
+    grid-template-rows:100%;  /* one row*/
+    grid-template-areas:"sec-div1 sec-div2";
+    align-items: end;
+    justify-items: left;
+    background-image: url("../images/02-hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+/* assigning grid areas */
+.sec-div1{
+    grid-area: sec-div1;
+    
+}
+.sec-div2{
+    grid-area: sec-div2;
+}
+
+/* working with image and h1 inside section after header */
+.sec-div1 img{
+    margin: 20px;
+}
+
+.sec-div2 h2{
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+    background-color: rgba(69, 189, 222, 0.8);
+}
+/* ----------------------------------------------------------------------------- */
+                        /* article grid code starts here */
+
+.art-grid{
+    display: grid;
+    min-height: 250px;
+    height:10vh;
+    grid-template-columns: 30% 70%; /* two column*/
+    grid-template-rows:100%;  /* one row*/
+    grid-template-areas:"art-div1 art-div2";
+    align-items: center;
+    justify-items: right;
+    /* background-color: aqua; */
    
 }
+.art-div1{
+    grid-area: art-div1;
+    border-right:2px solid black ;
+    
+
+}
+.art-div{
+    grid-area: art-div1;
+    height: 100%;
+}
+
+.art-div1 h2{
+    margin-right: 20px;
+    padding: 50px;
+    font-size: 30px;
+}
+.art-div2 p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1vw;
+    margin-left: 10px;
+}
 
 
-/* TOP header section code starts here */
-.parent-section{
-    display: flex;
-    height: 200px;
-    width: 100%;
-    /* background-color: aqua; */
+/* article code ends here */
+
+                                    /* working on main section */
+.main-grid{
+    display: grid;
+    min-height: 800px;
+    height:20vh;
+    grid-template-columns: 30% 70%; /* two column*/
+    grid-template-rows:100%;  /* one row*/
+    grid-template-areas:"main-div1 main-div2";
+    align-items: center;
+    justify-items: right;
+    
+
 }
-.parent-section1{
-    display: flex;
-    height: 250px;
-    width: 100%;
-    /* background-color: aqua; */
+                            /* left sife of main */
+.main-div1{
+    grid-area: main-div1;
+    border-right: 2px solid black;
 }
-.parent-section2{
-    display: flex;
-    height: 550px;
-    width: 100%;
-    /* background-color: aqua; */
+.main-div1 h3{
+    margin-right: 20px;
+    padding: 50px;
+    width: fit-content;
+    font-size: 30px;
 }
-.child-section6{
-    display: flex;
+
+                             /* right side main */
+.main-div2{
+    grid-area: main-div2;
+    /* code for sub parent div main */
+    width: 100%;
+    display: grid;
+    min-height: 800px;
+    /* height: 20vh; */
+    grid-template-columns: 50% 50%;
+    grid-template-rows:500px 50%;
+    grid-template-areas: "nested-div1 nested-div1"
+                        "nested-div2 nested-div3"
+                        "nested-div4 nested-div5";
+    /* background-color: dimgrey; */
+    grid-gap: 10px;
+    margin-left: 15px;
+    
+}
+.nested-div1:hover{
+    grid-area: nested-div1;
+    background-image: url("../images/02-portfolio-4.jpg");
+    background-size: cover;
+    border: 4px solid skyblue;
+    
+}
+
+.nested-div1 h3{
+    padding: 20px;
+    background-color: rgba(69, 189, 222, 0.8);
+    width: max-content;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+}
+
+
+.nested-div2{
+    grid-area: nested-div2;
+    background-image: url("../images/02-portfolio-1.jpg");
+    background-size: cover;
+    border: 4px solid skyblue;
+}
+.nested-div2 h3{
+    padding: 20px;
+    background-color: rgba(69, 189, 222, 0.8);
+    width: max-content;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    
+}
+
+.nested-div3{
+    grid-area: nested-div3;
+    background-image: url("../images/02-portfolio-2.jpg");
+    background-size: cover;
+    border: 4px solid skyblue;
+}
+.nested-div3 h3{
+    padding: 20px;
+    background-color: rgba(69, 189, 222, 0.8);
+    width: max-content;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.nested-div4{
+    grid-area: nested-div4;
+    background-image: url("../images/02-portfolio-3.jpg");
+    background-size: cover;
+    border: 4px solid skyblue;
+
+}
+.nested-div4 h3{
+    padding: 20px;
+    background-color: rgba(69, 189, 222, 0.8);
+    width: max-content;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.nested-div5{
+    grid-area: nested-div5;
+    background-image: url("../images/02-run-buddy.jpg");
+    background-size: cover;
+    border: 4px solid skyblue;
+
+}
+.nested-div5 h3{
+    padding: 20px;
+    background-color: rgba(69, 189, 222, 0.8);
+    width: max-content;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+                    /* FOOTER GRID CODE STARTS HERE */
+.footer-grid{
+    display: grid;
+    min-height: 250px;
+    height:15vh;
+    grid-template-columns: 30% 70%; /* two column*/
+    grid-template-rows:100%;  /* one row*/
+    grid-template-areas:"footer-div1 footer-div2";
     align-items: center;
     justify-content: center;
-    width: 30%;
-    height: 800px;
-    border-right: 6px solid black;
+        
 }
-.child-section6 h1{
-    font-family: 'Courier New', Courier, monospace;
-}
-.child-section7{
-    display: flex;
+.footer-div1{
+    grid-area: footer-div1;
     align-items: center;
     justify-content: center;
-    width:90%;
-    height: 800px;
+}
+.footer-div1 h1{
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
-.child-section8{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:90%;
-    height: 200px;
-    /* background-color: aqua; */
-
-}
-.child-section8 ul{
-    text-decoration: none;
-}
-.child-section8 li{
-    display: inline;
-    padding: 10px;
-    align-items: center;justify-content: center;
-    border-bottom: 5px solid black;
-    margin-left: 50px;
-}
-.child-section8 a{
-    font-family: 'Courier New', Courier, monospace;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.child-section1{
-    justify-content: center;    
-    width: 30%;
-    display: flex;
-    align-items: end;
-}
-.child-section2{
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    width: 70%;
-
-}
-.child-section2 a{
-    text-decoration: none;
-}
-.child-section3{
-    display: flex;
+.footer-div2{
+    grid-area: footer-div2;
+                                 /* nested grid inside footer */
+    width: 100%;
+    display: grid;
+    min-height: 100px;
+    grid-template-columns: 15% 30% 20% 20% 15% ;
+    grid-template-rows:100%;
+    grid-template-areas: "footer-item1 footer-item2 footer-item3 footer-item4 footer-item5";
     align-items: center;
     justify-content: left;
-    width: 100%;
-    height: 230px;
-    background-image: url(../images/background-section2.jpg);
-}
-.child-section3 img{
-    margin-left: 20px;
-    margin-top: 15px;
-}
-
-.child-section4{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    width: 30%;
-    height: 250px;
-}
-.child-section5{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    width: 90%;
-    height: 250px;
-}
-/* ------------------------------------ */
-
-.parent-section2{
-    display: flex;
-    height: 800px;
-    width: 100%;
-    /* background-color: rgb(93, 96, 96); */
-}
-
-
-/* ------------------------------ */
-.child-section4 h1{
-    padding: 80px;
-    border-right: 5px solid black;
-    font-family: 'Courier New', Courier, monospace;
-}
-.child-section5 h1{
-    margin-left: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    grid-gap: 10px;    
+    
 
 }
 
-.child-section1 h1{
-    margin-left: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    align-items:flex-end;
-    padding: 20px;
-    background-image: url(../images/background-section2.jpg);
+.footer-item1{
+    grid-area:footer-item1 ;
+    border-bottom: 5px solid black;
+
+}
+.footer-item2{
+    grid-area:footer-item2 ;
+    border-bottom: 5px solid black;
+
+}
+.footer-item3{
+    grid-area:footer-item3 ;
+    border-bottom: 5px solid black;
+
+}
+.footer-item4{
+    grid-area:footer-item4 ;
+    border-bottom: 5px solid black;
+
+}
+.footer-item5{
+    grid-area:footer-item5 ;
+    border-bottom: 5px solid black;
 
 }
 
-.nav{
-    text-decoration: none;
+
+
+.footer-div2 div{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
     
 }
-.nav li{
-    display: inline;
-    padding: 10px;
-    border-bottom: 4px solid black;
-    margin-right: 30px;
-    
-    
-}
-.nav li a{
-    font-family: 'Courier New', Courier, monospace;
-}
-.child-section3 h1{
-    font-family: 'Courier New', Courier, monospace;
-    margin-right: 30px;
-}
 
-/* header section code ends here */
+
+
+
+
+
+
+
 
 

@@ -217,7 +217,7 @@
 
 .nested-div3{
     grid-area: nested-div3;
-    background-image: url("../images/02-portfolio-2.jpg");
+    background-image: url("../images/prework.png");
     background-size: cover;
     border: 4px solid skyblue;
     opacity: 0.8;

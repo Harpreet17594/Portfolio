@@ -27,7 +27,7 @@
 .con-div1 h1{
     padding: 10px;
     width: fit-content;
-    margin-left: 20px;
+    margin-left: 10px;
     background-color: rgba(69, 189, 222, 0.8);
 }
 
@@ -176,7 +176,7 @@
 }
 .nested-div1{
     grid-area: nested-div1;
-    background-image: url("../images/02-portfolio-4.jpg");
+    background-image: url("../images/horison.png");
     background-size: cover;
     border: 4px solid skyblue;
     opacity: 0.8;
@@ -197,7 +197,7 @@
 
 .nested-div2{
     grid-area: nested-div2;
-    background-image: url("../images/02-portfolio-1.jpg");
+    background-image: url("../images/portfolio.png");
     background-size: cover;
     border: 4px solid skyblue;
     opacity: 0.8;
@@ -361,12 +361,12 @@
                                 
         }
         .con-div1 h1{
-            margin-left: 150px;
+            margin-left: 110px;
         }
         .con-div2 li{
             width: fit-content;
             display: block;
-            margin-left: 180px;
+            margin-left: 110px;
             text-align: center;
         }
                                             /* section after header */
@@ -380,7 +380,7 @@
                                 
         }
         .sec-div1{
-            margin-left: 100px;
+            margin-left: 60px;
         }
         .sec-div2 h2{
             text-align: center;
@@ -396,8 +396,9 @@
                                 
         }
         .art-div1 h2{
-            margin-right: 100px;
+            margin-right: 60px;
             border-right:0px ;
+            margin-bottom:30px ;
             border-bottom: 5px solid;
         }
         .art-div2 p{
@@ -431,6 +432,7 @@
                                 "nested-div5" ;
                                 min-height: 100%;
         }
+        /* contact me section media queries */
         .footer-grid{
             grid-template-columns: 100%;
             grid-template-rows: 40% 60%;
@@ -452,20 +454,24 @@
             justify-content: center;
         }
         .footer-div1{
-           margin-left: 150px;
+           margin-left: 100px;
         }
         .footer-div1 h1{
             
-            border-bottom: 5px solid black;
+            border-bottom: none;
             width: fit-content;
         }
-        .footer-div1 h3{
-            border-bottom: 1px solid black;
+        .footer-div2 h3{
+            border-bottom: none;
+            margin-left: 50px;
+            border-bottom: 2px solid black;
+
         }
         
         
         .footer-item1, .footer-item2, .footer-item3,.footer-item4,.footer-item5{
             width: fit-content;
+            border-bottom: none;
             /* margin-left: 150px; */
 
             
